@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/And/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.36302083333333335" />
+        <entry key="..\:/And/app/src/main/res/drawable/ic_launcher_backedge.xml" value="0.35260416666666666" />
+        <entry key="..\:/And/app/src/main/res/drawable/ic_launcher_background.xml" value="0.36302083333333335" />
+        <entry key="..\:/And/app/src/main/res/drawable/rectangle_fill_white_border_pink.xml" value="0.36302083333333335" />
+        <entry key="..\:/And/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/And/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/And/app/src/main/res/layout/activity_sign_up.xml" value="0.34739583333333335" />
+        <entry key="..\:/Android-Sehun/And/app/src/main/res/drawable/ic_launcher_background.xml" value="0.40260416666666665" />
+        <entry key="..\:/Android-Sehun/And/app/src/main/res/drawable/rectangle_fill_white_border_pink.xml" value="0.40260416666666665" />
+        <entry key="..\:/Android-Sehun/And/app/src/main/res/layout/activity_home.xml" value="0.38645833333333335" />
+        <entry key="..\:/Android-Sehun/And/app/src/main/res/layout/activity_main.xml" value="0.31354166666666666" />
+        <entry key="..\:/Android-Sehun/And/app/src/main/res/layout/activity_sign_up.xml" value="0.31354166666666666" />
+        <entry key="..\:/Android-Sehun/And/app/src/main/res/layout/fragment_blank.xml" value="0.36792452830188677" />
+        <entry key="..\:/Android-Sehun/And/app/src/main/res/layout/fragment_blank2.xml" value="0.12760416666666666" />
+        <entry key="..\:/Android-Sehun/Android-Sehun-week1/Android-Sehun-week1/SOPT_29th_Android_Assignment1/app/src/main/res/layout/activity_home.xml" value="0.3759057971014493" />
+        <entry key="..\:/Android-Sehun/Android-Sehun-week1/Android-Sehun-week1/SOPT_29th_Android_Assignment1/app/src/main/res/layout/activity_main.xml" value="0.3759057971014493" />
+        <entry key="..\:/Android-Sehun/Android-Sehun-week1/Android-Sehun-week1/SOPT_29th_Android_Assignment1/app/src/main/res/layout/activity_main22.xml" value="0.3713768115942029" />
+        <entry key="..\:/Android-Sehun/Android-Sehun-week1/Android-Sehun-week1/SOPT_29th_Android_Assignment1/app/src/main/res/layout/activity_recycler_view.xml" value="0.3713768115942029" />
+        <entry key="..\:/Android-Sehun/Android-Sehun-week1/Android-Sehun-week1/SOPT_29th_Android_Assignment1/app/src/main/res/layout/fragment_blank1.xml" value="0.3759057971014493" />
+        <entry key="..\:/Android-Sehun/Android-Sehun-week1/Android-Sehun-week1/SOPT_29th_Android_Assignment1/app/src/main/res/layout/fragment_blank2.xml" value="0.371875" />
+        <entry key="..\:/Android-Sehun/Android-Sehun-week1/Android-Sehun-week1/SOPT_29th_Android_Assignment1/app/src/main/res/layout/item_sample_list.xml" value="0.17481884057971014" />
+        <entry key="..\:/Android-Sehun/Android-Sehun-week1/Android-Sehun-week1/SOPT_29th_Android_Assignment1/app/src/main/res/layout/itemsamplelist.xml" value="0.3713768115942029" />
+        <entry key="..\:/Android-Sehun/SOPT_29th_Android_Assignment1/app/src/main/res/layout/fragment_blank1.xml" value="0.192481884057971" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -27,28 +27,38 @@ class HomeActivity : AppCompatActivity() {
 
         supportFragmentManager.beginTransaction().add(R.id.container_main, blankFragment1).commit()
 
-        binding.btnFollower.setOnClickListener {
+        binding.btnRepository.setOnClickListener {
             val transaction = supportFragmentManager.beginTransaction()
 
             when (position) {
 
                 FIRST_POSITION -> {
-                    transaction.replace(R.id.container_main, blankFragment1)
+                    transaction.replace(R.id.container_main, blankFragment2)
                     position = SECOND_POSITION
-
                 }
-                SECOND_POSITION -> {
-                    transaction.replace(R.id.container_main,blankFragment2)
+            }
+            transaction.commit()
+        }
+
+        binding.btnFollower.setOnClickListener {
+            val transaction = supportFragmentManager.beginTransaction()
+
+            when (position){
+
+                SECOND_POSITION ->{
+                    transaction.replace(R.id.container_main, blankFragment1)
                     position = FIRST_POSITION
                 }
             }
             transaction.commit()
         }
+
+
     }
 
     companion object{
         const val FIRST_POSITION = 1
-        const val SECOND_POSITION =2
+        const val SECOND_POSITION = 2
     }
 
 

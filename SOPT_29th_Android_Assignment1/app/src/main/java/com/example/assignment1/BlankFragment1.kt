@@ -17,26 +17,27 @@ class BlankFragment1 : Fragment() {
         savedInstanceState: Bundle?
 
 
-
     ): View? {
 
         binding= FragmentBlank1Binding.inflate(layoutInflater)
 
         userAdapter = UserAdapter()
 
-        binding.rvSample.adapter = userAdapter
+        binding.rvFollower.adapter = userAdapter
 
         userAdapter.userList.addAll(
-            listOf(
-                UserData("김대호","안녕하세요")
+            listOf<UserData>(
+                UserData("김대호","안드레인저 옐로"),
+                UserData("김수빈","안드레인저 그린"),
+                UserData("김송현","안드레인저 핑크"),
+                UserData("이혜빈","안드레인저 레드")
             )
         )
 
         userAdapter.notifyDataSetChanged()
 
-
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_blank1, container, false)
+        return binding.root
     }
 
 }

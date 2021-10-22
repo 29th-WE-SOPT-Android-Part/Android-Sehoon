@@ -1,6 +1,17 @@
 # Android-Sehun
 --------------------------------------------------
-## :notebook_with_decorative_cover:1주차 과제 : 기본 UI요소 및 화면 전환 구현하기
+## :notebook_with_decorative_cover:1주차 과제 : RecycleView를 활용해 Fragment 전환 구현하기
+![안드로이드2차세미나 - 6 - 2](https://user-images.githubusercontent.com/81347125/138463290-bfe39442-d2ac-4463-8d5e-9723773b5f4b.png)
+![안드로이드2차세미나 - 6 - 3](https://user-images.githubusercontent.com/81347125/138463345-88acd125-193d-4cfa-a937-858e136877da.png)
+![안드로이드2차세미나 - 6 - 4](https://user-images.githubusercontent.com/81347125/138463353-fd2f1a5a-98bd-4e14-b948-d54e847190d0.png)
+![안드로이드2차세미나 - 6 - 5](https://user-images.githubusercontent.com/81347125/138463362-49f7c7b1-f0c2-4d6b-9366-31c4173e8cce.png)
+--------------------------------------------------
+
+
+
+
+
+
 ![github_김세훈_ver1-12](https://user-images.githubusercontent.com/70698151/135753916-daa72844-16b1-4049-8d2f-b25719f79e12.png)
 --------------------------------------------------
 ![1](https://user-images.githubusercontent.com/81347125/136698716-d7e0eeb5-4b92-4d2f-a4dd-b33dec99fcfb.PNG)

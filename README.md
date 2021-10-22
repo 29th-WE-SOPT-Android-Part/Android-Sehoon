@@ -1,6 +1,6 @@
 # Android-Sehun
-
-
+--------------------------------------------------
+## :notebook_with_decorative_cover:1주차 과제 : 기본 UI요소 및 화면 전환 구현하기
 ![github_김세훈_ver1-12](https://user-images.githubusercontent.com/70698151/135753916-daa72844-16b1-4049-8d2f-b25719f79e12.png)
 --------------------------------------------------
 ![1](https://user-images.githubusercontent.com/81347125/136698716-d7e0eeb5-4b92-4d2f-a4dd-b33dec99fcfb.PNG)

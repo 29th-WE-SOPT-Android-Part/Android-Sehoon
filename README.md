@@ -9,7 +9,7 @@
 <br>
 ## :notebook_with_decorative_cover: 구현 결과
 
-img tmp="https://user-images.githubusercontent.com/81347125/138463606-7320b5e8-4425-438b-ac29-86557c28000f.PNG)" width="40%"
+<img tmp="https://user-images.githubusercontent.com/81347125/138463606-7320b5e8-4425-438b-ac29-86557c28000f.PNG)" width="40%">
 
 
 

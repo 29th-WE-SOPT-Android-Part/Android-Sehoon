@@ -14,24 +14,17 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
         binding = ActivityHomeBinding.inflate(layoutInflater)
-
         initTransactionEvent()
-
-
         setContentView(binding.root)
     }
 
     private fun initTransactionEvent(){
         val blankFragment1 = BlankFragment1()
         val blankFragment2 = BlankFragment2()
-
         supportFragmentManager.beginTransaction().add(R.id.container_main, blankFragment1).commit()
-
         binding.btnRepository.setOnClickListener {
             val transaction = supportFragmentManager.beginTransaction()
-
             when (position) {
-
                 FIRST_POSITION -> {
                     transaction.replace(R.id.container_main, blankFragment2)
                     position = SECOND_POSITION
@@ -39,12 +32,9 @@ class HomeActivity : AppCompatActivity() {
             }
             transaction.commit()
         }
-
         binding.btnFollower.setOnClickListener {
             val transaction = supportFragmentManager.beginTransaction()
-
             when (position){
-
                 SECOND_POSITION ->{
                     transaction.replace(R.id.container_main, blankFragment1)
                     position = FIRST_POSITION
@@ -52,16 +42,10 @@ class HomeActivity : AppCompatActivity() {
             }
             transaction.commit()
         }
-
-
     }
-
     companion object{
         const val FIRST_POSITION = 1
         const val SECOND_POSITION = 2
     }
-
-
-
 }
 

@@ -7,42 +7,21 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tv_Logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="SOPTHub"
-        android:textColor="#F64782"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_Login_Logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="로그인"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_Logo" />
-
-    <TextView
         android:id="@+id/tv_Id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="아이디"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="171dp"
+        android:layout_marginEnd="259dp"
+        android:layout_marginBottom="449dp"
+        android:text="깃허브 아이디"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/ed_Id"
-        app:layout_constraintStart_toStartOf="@+id/ed_Id" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_Login"
@@ -82,54 +61,77 @@
         android:id="@+id/tv_Pw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="275dp"
+        android:layout_marginEnd="288dp"
+        android:layout_marginBottom="345dp"
         android:text="비밀번호"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/ed_Pw"
-        app:layout_constraintStart_toStartOf="@+id/ed_Pw" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/ed_Id"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="197dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="399dp"
         android:background="@drawable/rectangle_fill_white_border_pink"
         android:ems="10"
-        android:hint="아이디를 입력해주세요"
-        android:paddingStart="20dp"
+        android:hint="깃허브 아이디를 입력해주세요"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:paddingStart="20dp"
         android:singleLine="false"
         android:textAllCaps="false"
         android:textColor="#9C9595"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/ed_Pw"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_Login_Logo" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/ed_Pw"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="293dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="301dp"
         android:background="@drawable/rectangle_fill_white_border_pink"
         android:ems="10"
         android:hint="비밀번호를 입력해주세요"
-        android:paddingStart="20dp"
         android:inputType="textPersonName|textPassword"
         android:minHeight="48dp"
+        android:paddingStart="20dp"
         android:textColor="#9C9595"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_Login"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_Login_Logo" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginBottom="509dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_github" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

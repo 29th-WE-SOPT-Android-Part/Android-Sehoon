@@ -9,10 +9,13 @@ import com.example.assignment1.databinding.ItemRepositoryListBinding
 class UserAdapter2 : RecyclerView.Adapter<UserAdapter2.UserViewHolder>(){
     val userList = mutableListOf<UserData>()
 
+
     class UserViewHolder(private val binding : ItemRepositoryListBinding) : RecyclerView.ViewHolder(binding.root) {
         fun onBind(data : UserData){
             binding.tvRp.text = data.name
             binding.tvRp2.text = data.introduction
+
+
 
         }
 

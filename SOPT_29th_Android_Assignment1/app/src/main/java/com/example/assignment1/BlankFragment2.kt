@@ -9,23 +9,15 @@ import com.example.assignment1.databinding.FragmentBlank1Binding
 import com.example.assignment1.databinding.FragmentBlank2Binding
 
 class BlankFragment2 : Fragment() {
-
     private lateinit var userAdapter2: UserAdapter2
     private lateinit var binding : FragmentBlank2Binding
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-
-
     ): View? {
-
         binding= FragmentBlank2Binding.inflate(layoutInflater)
-
         userAdapter2 = UserAdapter2()
-
         binding.rvRepository.adapter = userAdapter2
-
         userAdapter2.userList.addAll(
             listOf<UserData>(
                 UserData("대호\n레포지토리","과제유"),
@@ -34,11 +26,8 @@ class BlankFragment2 : Fragment() {
                 UserData("혜빈\n레포지토리","과제과제과제과제과점")
             )
         )
-
         userAdapter2.notifyDataSetChanged()
-
         // Inflate the layout for this fragment
         return binding.root
     }
-
 }

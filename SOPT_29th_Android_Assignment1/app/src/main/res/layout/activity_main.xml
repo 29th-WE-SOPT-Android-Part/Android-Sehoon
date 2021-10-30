@@ -15,7 +15,7 @@
         android:layout_marginEnd="259dp"
         android:layout_marginBottom="449dp"
         android:text="깃허브 아이디"
-        android:textColor="@color/black"
+        android:textColor="#333333"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -27,8 +27,10 @@
         android:id="@+id/btn_Login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="520dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="74dp"
         android:backgroundTint="#F64782"
         android:paddingTop="12dp"
         android:paddingBottom="12dp"
@@ -36,26 +38,11 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:iconTint="#ED8585"
-        app:layout_constraintBottom_toTopOf="@+id/btn_Join"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btn_Join"
-        android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="60dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="회원가입"
-        android:textColor="#9C9595"
-        android:textSize="16sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_Pw"
@@ -96,16 +83,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.482" />
 
     <EditText
         android:id="@+id/ed_Pw"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="293dp"
+        android:layout_marginTop="301dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="301dp"
+        android:layout_marginBottom="293dp"
         android:background="@drawable/rectangle_fill_white_border_pink"
         android:ems="10"
         android:hint="비밀번호를 입력해주세요"
@@ -133,5 +121,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/img_github" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="582dp"
+        android:layout_marginEnd="158dp"
+        android:layout_marginBottom="41dp"
+        android:text="계정이 없으신가요?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="582dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="41dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

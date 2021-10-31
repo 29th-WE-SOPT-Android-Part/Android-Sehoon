@@ -64,5 +64,5 @@ selector>
 <img src ="https://user-images.githubusercontent.com/81347125/139589402-267705eb-db6d-47e3-bf0a-0607b11cab51.PNG" width = "40%">
 <img src ="https://user-images.githubusercontent.com/81347125/139589405-2cdbd2a1-1425-4084-b00a-215b5102e9f4.PNG" width = "40%">
 
-
+font를 적용 시 글자칸이 위와 같이 깨진다. 조금 더 알아봐야 할 것 같다
 

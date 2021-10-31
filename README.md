@@ -1,6 +1,6 @@
 # Android-Sehun
 --------------------------------------------------
-## :notebook_with_decorative_cover:1주차 과제 : RecycleView를 활용해 Fragment 전환 구현하기
+## :notebook_with_decorative_cover:2주차 과제 : RecycleView를 활용해 Fragment 전환 구현하기
 <img src ="https://user-images.githubusercontent.com/81347125/138463290-bfe39442-d2ac-4463-8d5e-9723773b5f4b.png" width = "70%">
 <img src ="https://user-images.githubusercontent.com/81347125/138463345-88acd125-193d-4cfa-a937-858e136877da.png" width = "70%">
 <img src ="https://user-images.githubusercontent.com/81347125/138463353-fd2f1a5a-98bd-4e14-b948-d54e847190d0.png" width = "70%">

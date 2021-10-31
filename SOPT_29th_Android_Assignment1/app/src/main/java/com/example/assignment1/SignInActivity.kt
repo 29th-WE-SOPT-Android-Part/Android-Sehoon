@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        binding.btnJoin.setOnClickListener {
+        binding.tvJoin1.setOnClickListener {
                 startActivity(intent2)
         }
         setContentView(binding.root)

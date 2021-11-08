@@ -38,7 +38,7 @@ class HomeActivity : AppCompatActivity() {
 
         binding.bnvMenu.setOnNavigationItemSelectedListener{
             when(it.itemId){
-                R.id.menu_profile -> {
+                R.id.menu_camera -> {
                     binding.vpMain.currentItem = FIRST_POSITION
                     return@setOnNavigationItemSelectedListener true
                 }

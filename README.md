@@ -1,19 +1,68 @@
 # Android-Sehun
-
-
-![github_김세훈_ver1-12](https://user-images.githubusercontent.com/70698151/135753916-daa72844-16b1-4049-8d2f-b25719f79e12.png)
 --------------------------------------------------
-![1](https://user-images.githubusercontent.com/81347125/136698716-d7e0eeb5-4b92-4d2f-a4dd-b33dec99fcfb.PNG)
+## :notebook_with_decorative_cover:3주차 과제 : 과제에 디자인 적용하기
+<img src ="https://user-images.githubusercontent.com/81347125/139589093-b4ac6833-c0a6-486d-898c-e72cbc52557e.png" width = "70%">
+<img src ="https://user-images.githubusercontent.com/81347125/139589096-c0517ebe-3dff-405f-8757-88973a5ec993.png" width = "70%">
+<img src ="https://user-images.githubusercontent.com/81347125/139589100-e836e8ef-e7df-407e-8038-1c31e77fab2d.png" width = "70%">
+<img src ="https://user-images.githubusercontent.com/81347125/139589102-36c60ff1-dbfc-4935-9d27-1075fae08806.png" width = "70%">
+<img src ="https://user-images.githubusercontent.com/81347125/139589104-d092dac1-e24c-4163-a484-f27ad6bf3d6c.png" width = "70%">
+<img src ="https://user-images.githubusercontent.com/81347125/139589107-46397e8e-5644-4a61-b42f-6d9f165945ce.png" width = "70%">
+<img src ="https://user-images.githubusercontent.com/81347125/139589112-775453df-1226-403e-97d8-ba43290d1a1a.png" width = "70%">
+<img src ="https://user-images.githubusercontent.com/81347125/139589114-74c7a8a7-758f-4275-bb39-f4d70f529134.png" width = "70%">
+<br>
 
-* intent에 대한 변수 2개 선언
+
+## :notebook_with_decorative_cover:과제리뷰
+### :pushpin: Design by Figma
 
 
-![2](https://user-images.githubusercontent.com/81347125/136698743-2fb4301a-1761-4b12-996a-fadab46ec377.PNG)
+<pre>
+<code>
+//rectangle_fill_gray
+  ?xml version="1.0" encoding="utf-8"?>
+shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    corners android:radius="5dp"/>
+    solid android:color="#F2F2F2"/>
+    stroke android:width="1dp" android:color="#D0D0D0"/>
+shape>
+</code>
+</pre>
 
-* 아이디와 비밀번호 둘 중 하나라도 입력 받지 못했을 시 토스트메시지 출력과 함께 다음 Activity로 넘어가지 않음
+
+<pre>
+<code>
+//rectangle_fill_pink
+ ?xml version="1.0" encoding="utf-8"?>
+shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+corners android:radius="5dp"/>
+    solid android:color="@color/Pink"/>
+    stroke android:width="1dp" android:color="@color/Pink"/>
+shape>
+
+</code>
+</pre>
 
 
-![3](https://user-images.githubusercontent.com/81347125/136698745-47fd6691-bac4-4905-b8b5-ec1f067a570b.PNG)
+<pre>
+<code>
+//selector
+?xml version="1.0" encoding="utf-8"?>
+selector xmlns:android="http://schemas.android.com/apk/res/android">
+    item android:drawable="@drawable/rectangle_fill_white_border_pink" android:state_focused="true" />
+    item android:drawable="@drawable/rectangle_fill_gray" android:state_focused="false" />
 
-* 아이디 이름 비밀번호 세 개중 하나라도 입력 받지 못했을시 토스트 메시지 출력과 함께 넘어가지 않음
-* Finish()로 초기화면으로 이동
+
+selector>
+</code>
+</pre>
+
+<br>
+<hr>
+
+<img src ="https://user-images.githubusercontent.com/81347125/139589402-267705eb-db6d-47e3-bf0a-0607b11cab51.PNG" width = "40%">
+<img src ="https://user-images.githubusercontent.com/81347125/139589405-2cdbd2a1-1425-4084-b00a-215b5102e9f4.PNG" width = "40%">
+
+font를 적용 시 글자칸이 위와 같이 깨진다. 조금 더 알아봐야 할 것 같다
+

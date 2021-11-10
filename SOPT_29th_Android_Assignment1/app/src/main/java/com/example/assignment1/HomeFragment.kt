@@ -7,31 +7,37 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.assignment1.databinding.FragmentHomeBinding
 import com.example.assignment1.databinding.FragmentProfileBinding
+import com.google.android.material.tabs.TabLayoutMediator
 
 
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
+    private lateinit var viewPagerAdapter2: ViewPagerAdapter2
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        binding = FragmentHomeBinding.inflate(layoutInflater)
+        initAdapter()
+        initTabLayout()
+        return binding.root
     }
 
+    private fun initAdapter(){
+        val fragmentList = listOf(fragment_following(), fragment_follower())
+        viewPagerAdapter2 = ViewPagerAdapter2(this)
+        viewPagerAdapter2.fragmentList.addAll(fragmentList)
+
+        binding.vpHome.adapter = viewPagerAdapter2
+    }
+
+    private fun initTabLayout(){
+        val tabLabel = listOf("팔로잉", "팔로워")
+
+        TabLayoutMediator(binding.tlHome, binding.vpHome){
+            tab, position -> tab.text = tabLabel[position]
+        }.attach()
+    }
 }
-/*
-private lateinit var binding: FragmentProfileBinding
-private var position = ProfileFragment.FIRST_POSITION
-
-override fun onCreateView(
-    inflater: LayoutInflater, container: ViewGroup?,
-    savedInstanceState: Bundle?
-): View? {
-    binding = FragmentProfileBinding.inflate(layoutInflater)
-    initTransactionEvent()
-    return binding.root
-
-}*/

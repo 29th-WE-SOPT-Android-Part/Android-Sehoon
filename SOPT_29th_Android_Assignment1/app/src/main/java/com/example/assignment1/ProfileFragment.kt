@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
 import com.example.assignment1.databinding.FragmentBlank1Binding
 import com.example.assignment1.databinding.FragmentProfileBinding
 
@@ -19,8 +20,16 @@ class ProfileFragment : Fragment() {
     ): View? {
         binding = FragmentProfileBinding.inflate(layoutInflater)
         initTransactionEvent()
+        initImage()
         return binding.root
 
+    }
+
+    private fun initImage(){
+        Glide.with(this)
+            .load(R.drawable.profiles)
+            .circleCrop()
+            .into(binding.ivProfiles)
     }
 
     private fun initTransactionEvent(){

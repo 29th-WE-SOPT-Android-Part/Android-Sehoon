@@ -22,7 +22,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun initAdapter(){
 
-        val fragmentList = listOf(CameraFragment(),HomeFragment(),ProfileFragment())
+        val fragmentList = listOf(ProfileFragment(),HomeFragment(),CameraFragment())
         viewPagerAdapter = ViewPagerAdapter(this)
         viewPagerAdapter.fragments.addAll(fragmentList)
 
@@ -38,7 +38,7 @@ class HomeActivity : AppCompatActivity() {
 
         binding.bnvMenu.setOnNavigationItemSelectedListener{
             when(it.itemId){
-                R.id.menu_camera -> {
+                R.id.menu_profile -> {
                     binding.vpMain.currentItem = FIRST_POSITION
                     return@setOnNavigationItemSelectedListener true
                 }

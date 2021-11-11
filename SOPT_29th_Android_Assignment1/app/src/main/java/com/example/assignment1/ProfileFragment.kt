@@ -46,6 +46,8 @@ class ProfileFragment : Fragment() {
                }
            }
            transaction.commit()
+           binding.btnRepository.isSelected = !binding.btnRepository.isSelected
+           binding.btnFollower.isSelected = false
        }
        binding.btnFollower.setOnClickListener {
            val transaction = childFragmentManager.beginTransaction()
@@ -56,6 +58,10 @@ class ProfileFragment : Fragment() {
                }
            }
            transaction.commit()
+           binding.btnFollower.isSelected = !binding.btnFollower.isSelected
+           binding.btnRepository.isSelected = false
+
+
        }
    }
 

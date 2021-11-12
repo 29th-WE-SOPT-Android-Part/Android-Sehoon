@@ -6,9 +6,9 @@
 <br>
 
 ## :notebook_with_decorative_cover: 구현 결과
-<img src="https://user-images.githubusercontent.com/81347125/141486621-2a9ada2a-a15b-44fa-882c-6ff387baf410.gif" width="40%">    
-<img src="https://user-images.githubusercontent.com/81347125/141486628-d21f5cac-f4ff-4932-ae04-fcbebdd4f768.gif" width="40%">  
-<br>
+<img src="https://user-images.githubusercontent.com/81347125/141486621-2a9ada2a-a15b-44fa-882c-6ff387baf410.gif" width="30%">               <img src="https://user-images.githubusercontent.com/81347125/141486628-d21f5cac-f4ff-4932-ae04-fcbebdd4f768.gif" width="30%">         
+　　　　　　　<로그인>　　　　　　　　　　　　　　<회원가입>
+
 
 ## :notebook_with_decorative_cover:과제리뷰
 ### :pushpin: RequestData

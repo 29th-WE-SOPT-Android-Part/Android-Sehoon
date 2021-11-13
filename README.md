@@ -15,7 +15,6 @@
 
 <pre>
 <code>
-
 data class RequestLoginData(
     @SerializedName("email")
     val email: String,
@@ -36,7 +35,6 @@ data class RequestSignUpData(
 
 <pre>
 <code>
-
 data class ResponseLoginData(
     val status : Int,
     val success : Boolean,
@@ -70,7 +68,6 @@ data class ResponseSignUpData(
 
 <pre>
 <code>
-
 interface Service {
     @Headers("Content-Type: application/json")
     @POST("user/login")
@@ -94,7 +91,6 @@ interface Service2 {
 
 <pre>
 <code>
-
 object ServiceCreator {
     private const val BASE_URL = "https://asia-northeast3-we-sopt-29.cloudfunctions.net/api/"
     private val retrofit : Retrofit = Retrofit
@@ -122,7 +118,6 @@ object ServiceCreator2 {
 
 <pre>
 <code>
-
  private fun initNetwork(){
         val requestLoginData = RequestLoginData(
             binding.edId.text.toString(),
@@ -158,7 +153,6 @@ object ServiceCreator2 {
 
 <pre>
 <code>
-
  private fun initNetwork(){
         val requestSignUpData = RequestSignUpData(
             binding.edName.text.toString(),

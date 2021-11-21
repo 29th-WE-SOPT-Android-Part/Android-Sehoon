@@ -65,7 +65,7 @@ class SignInActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<ResponseLoginData>, t: Throwable) {
-
+                Log.e("NetworkTest","error")
             }
 
         })

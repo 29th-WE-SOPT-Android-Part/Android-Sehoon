@@ -39,14 +39,15 @@
         <entry key="..\:/Android-Sehun/SOPT_29th_Android_Assignment1/app/src/main/res/drawable/selector_sample_text_orange.xml" value="0.40260416666666665" />
         <entry key="..\:/Android-Sehun/SOPT_29th_Android_Assignment1/app/src/main/res/drawable/shapedrawble.xml" value="0.40260416666666665" />
         <entry key="..\:/Android-Sehun/SOPT_29th_Android_Assignment1/app/src/main/res/font/noto_sans_kr.xml" value="0.4166666666666667" />
-        <entry key="..\:/Android-Sehun/SOPT_29th_Android_Assignment1/app/src/main/res/layout/activity_home.xml" value="1.1" />
+        <entry key="..\:/Android-Sehun/SOPT_29th_Android_Assignment1/app/src/main/res/layout/activity_home.xml" value="0.22" />
         <entry key="..\:/Android-Sehun/SOPT_29th_Android_Assignment1/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Android-Sehun/SOPT_29th_Android_Assignment1/app/src/main/res/layout/activity_sign_up.xml" value="1.1" />
         <entry key="..\:/Android-Sehun/SOPT_29th_Android_Assignment1/app/src/main/res/layout/fragment_blank1.xml" value="0.33" />
         <entry key="..\:/Android-Sehun/SOPT_29th_Android_Assignment1/app/src/main/res/layout/fragment_blank2.xml" value="0.33" />
+        <entry key="..\:/Android-Sehun/SOPT_29th_Android_Assignment1/app/src/main/res/layout/fragment_camera.xml" value="0.1879432624113475" />
         <entry key="..\:/Android-Sehun/SOPT_29th_Android_Assignment1/app/src/main/res/layout/fragment_follower.xml" value="0.3645833333333333" />
         <entry key="..\:/Android-Sehun/SOPT_29th_Android_Assignment1/app/src/main/res/layout/fragment_following.xml" value="0.3523550724637681" />
-        <entry key="..\:/Android-Sehun/SOPT_29th_Android_Assignment1/app/src/main/res/layout/fragment_home.xml" value="1.0" />
+        <entry key="..\:/Android-Sehun/SOPT_29th_Android_Assignment1/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/Android-Sehun/SOPT_29th_Android_Assignment1/app/src/main/res/layout/fragment_profile.xml" value="0.47105788423153694" />
         <entry key="..\:/Android-Sehun/SOPT_29th_Android_Assignment1/app/src/main/res/layout/item_Repository_list.xml" value="0.38645833333333335" />
         <entry key="..\:/Android-Sehun/SOPT_29th_Android_Assignment1/app/src/main/res/layout/item_follower_list.xml" value="0.38645833333333335" />

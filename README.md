@@ -1,193 +1,106 @@
 # Android-Sehun
 --------------------------------------------------
-## :notebook_with_decorative_cover:4주차 과제 : 로그인/회원가입 API 연동
-<img src ="https://user-images.githubusercontent.com/81347125/141483451-f730e6d1-f143-4a83-821a-d4d4d37bfbcc.png" width = "70%">
-<img src ="https://user-images.githubusercontent.com/81347125/141483457-97cacea3-be45-4b69-845d-567932b9ef52.png" width = "70%">
+## :notebook_with_decorative_cover:7주차 과제 : 온보딩, 자동로그인, 패키징 구현
+<img src ="https://user-images.githubusercontent.com/81347125/146560839-e602c125-9fb3-4475-a19d-2797fb9fcba0.png" width = "70%">
+<img src ="https://user-images.githubusercontent.com/81347125/146560842-53cd3055-4ca0-40a7-ae97-192505eeeec3.png" width = "70%">
+<img src ="https://user-images.githubusercontent.com/81347125/146560822-c3713ded-4982-46d9-81c3-0c0def21cea8.png" width = "70%">
+<img src ="https://user-images.githubusercontent.com/81347125/146560829-19b73300-338d-442e-8d17-2da42dcb6b58.png" width = "70%">
+<img src ="https://user-images.githubusercontent.com/81347125/146560831-85cf9e07-076a-45d9-8935-3430e4cc4369.png" width = "70%">
+<img src ="https://user-images.githubusercontent.com/81347125/146560832-93e3fe20-170c-4efa-971c-6302be70b3ef.png" width = "70%">
 <br>
 
 ## :notebook_with_decorative_cover: 구현 결과
-<img src="https://user-images.githubusercontent.com/81347125/141486621-2a9ada2a-a15b-44fa-882c-6ff387baf410.gif" width="30%">               <img src="https://user-images.githubusercontent.com/81347125/141486628-d21f5cac-f4ff-4932-ae04-fcbebdd4f768.gif" width="30%">         
-　　　　　　　<로그인>　　　　　　　　　　　　　　<회원가입>
+<img src="https://user-images.githubusercontent.com/81347125/146560834-ece3db41-e5eb-4cbd-827a-bf40f085b275.gif" width="30%">               <img src="https://user-images.githubusercontent.com/81347125/146561185-01639604-7703-475e-a5db-1b05f5b6b16f.PNG" width="30%">         
+　　　　　　
 
 
 <br>
 
 ## :notebook_with_decorative_cover:과제리뷰
-### :pushpin: RequestData
+### :pushpin: OnBoarding1,2
 
 <pre>
 <code>
-data class RequestLoginData(
-    @SerializedName("email")
-    val email: String,
-    val password: String
-)
-
-data class RequestSignUpData(
-    @SerializedName("email")
-    val email: String,
-    val name: String,
-    val password: String
-)
-
+ binding.btnNext.setOnClickListener {
+            findNavController().navigate(R.id.action_onBoardingFragment1_to_onBoardingFragment2)
+        }
 </code>
 </pre>
 
-### :pushpin: ResponseData
-
+### :pushpin: OnBoarding3
 <pre>
 <code>
-data class ResponseLoginData(
-    val status : Int,
-    val success : Boolean,
-    val message : String,
-    val data : Data
-) {
-    data class Data (
-        val id : Int,
-        val name : String,
-        val email : String
-        )
-}
+ val intent = Intent(activity, SignInActivity::class.java)
+        binding.btnStart.setOnClickListener {
+            findNavController().navigate(R.id.action_onBoardingFragment3_to_signInActivity)
 
-data class ResponseSignUpData(
-    val status : Int,
-    val success : Boolean,
-    val message : String,
-    val data : Data
-) {
-    data class Data (
-        val id : Int,
-        val name : String,
-        val email : String
-    )
-}
-
+            (activity as OnBoardingActivity).finish()
+        }
 </code>
 </pre>
 
-### :pushpin: retrofit interface
+### :pushpin: SharedPreferences
 
 <pre>
 <code>
-interface Service {
-    @Headers("Content-Type: application/json")
-    @POST("user/login")
-    fun postLogin(
-        @Body requestLoginData: RequestLoginData
-    ) : Call<ResponseLoginData>
-}
+object SharedPreferences {
+    private const val STORAGE_KEY = "USER_AUTH"
+    private const val AUTO_LOGIN = "AUTO_LOGIN"
+    fun getAutoLogin(context: Context) : Boolean {
+        val preferences = context.getSharedPreferences(STORAGE_KEY, Context.MODE_PRIVATE)
+        return preferences.getBoolean(AUTO_LOGIN, false)
+    }
 
-interface Service2 {
-    @Headers("Content-Type: application/json")
-    @POST("user/signup")
-    fun postSignUp(
-        @Body requestSignUpData: RequestSignUpData
-    ) : Call<ResponseSignUpData>
-}
+    fun setAutoLogin(context: Context, value : Boolean) {
+        val preferences = context.getSharedPreferences(STORAGE_KEY, Context.MODE_PRIVATE)
+        preferences.edit()
+            .putBoolean(AUTO_LOGIN, value)
+            .apply()
+    }
 
+    fun removeAutoLogin(context: Context) {
+        val preferences = context.getSharedPreferences(STORAGE_KEY, Context.MODE_PRIVATE)
+        preferences.edit()
+            .remove(AUTO_LOGIN)
+            .apply()
+    }
+
+    fun clearStorage(context: Context) {
+        val preferences = context.getSharedPreferences(STORAGE_KEY, Context.MODE_PRIVATE)
+        preferences.edit()
+            .clear()
+            .apply()
+    }
+}
 </code>
 </pre>
 
-### :pushpin: Creator(object)
+### :pushpin: 자동로그인 
 
 <pre>
 <code>
-object ServiceCreator {
-    private const val BASE_URL = "https://asia-northeast3-we-sopt-29.cloudfunctions.net/api/"
-    private val retrofit : Retrofit = Retrofit
-        .Builder()
-        .baseUrl(BASE_URL)
-        .addConverterFactory(GsonConverterFactory.create())
-        .build()
-    val service : Service = retrofit.create(Service::class.java)
-}
-
-object ServiceCreator2 {
-    private const val BASE_URL = "https://asia-northeast3-we-sopt-29.cloudfunctions.net/api/"
-    private val retrofit : Retrofit = Retrofit
-        .Builder()
-        .baseUrl(BASE_URL)
-        .addConverterFactory(GsonConverterFactory.create())
-        .build()
-    val service2 : Service2 = retrofit.create(Service2::class.java)
-}
-
-</code>
-</pre>
-
-### :pushpin: Implementation of SignInActivity
-
-<pre>
-<code>
- private fun initNetwork(){
-        val requestLoginData = RequestLoginData(
-            binding.edId.text.toString(),
-            binding.edPw.text.toString()
-        )
-
-        val call : Call<ResponseLoginData> = ServiceCreator.service.postLogin(requestLoginData)
-        
-        call.enqueue(object : Callback<ResponseLoginData> {
-            override fun onResponse(
-                call: Call<ResponseLoginData>,
-                response: Response<ResponseLoginData>
-            ){
-                if(response.isSuccessful){
-                   Toast.makeText(this@SignInActivity,"${response.body()?.data?.name}님 반갑습니다", Toast.LENGTH_SHORT).show()
-                   startActivity(Intent(this@SignInActivity,HomeActivity::class.java))
-                }
-                else{
-                    response.body()
-                }
-            }
-
-            override fun onFailure(call: Call<ResponseLoginData>, t: Throwable) {
-                Log.e("NetworkTest","error")
-            }
-        })
+ private fun isAutoLogin() {
+        if(SharedPreferences.getAutoLogin(this)){
+            shortToast("자동로그인 완료")
+            startActivity(Intent(this, HomeActivity::class.java))
+                finish()
+        }
     }
     
 </code>
 </pre>
 
-### :pushpin: Implementation of SignUpActivity
+### :pushpin: 자동로그인 해제
 
 <pre>
 <code>
- private fun initNetwork(){
-        val requestSignUpData = RequestSignUpData(
-            binding.edName.text.toString(),
-            binding.edId2.text.toString(),
-            binding.edPw2.text.toString()
-
-        )
-
-        val call : Call<ResponseSignUpData> = ServiceCreator2.service2.postSignUp(requestSignUpData)
-
-        call.enqueue(object : Callback<ResponseSignUpData> {
-            override fun onResponse(
-                call: Call<ResponseSignUpData>,
-                response: Response<ResponseSignUpData>
-            ){
-                if(response.isSuccessful){
-                    Toast.makeText(this@SignUpActivity,"${response.body()?.data?.name}님 반갑습니다", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this@SignUpActivity,SignInActivity::class.java))
-                }
-                else{
-                    response.body()
-
-                }
-            }
-
-            override fun onFailure(call: Call<ResponseSignUpData>, t: Throwable) {
-                Log.e("NetworkTest","error")
-
-            }
-
-        })
+private fun initClickEvent(){
+        binding.ivAutoLoginFalse.setOnClickListener{
+            requireContext().shortToast("자동로그인 해제")
+            SharedPreferences.removeAutoLogin(requireContext())
+            SharedPreferences.clearStorage(requireContext())
+        }
     }
-    
 </code>
 </pre>
 

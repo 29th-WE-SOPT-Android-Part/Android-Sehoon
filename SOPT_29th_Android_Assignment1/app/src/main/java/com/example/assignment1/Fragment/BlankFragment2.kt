@@ -1,11 +1,12 @@
-package com.example.assignment1
+package com.example.assignment1.Fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.assignment1.databinding.FragmentBlank1Binding
+import com.example.assignment1.Adapter.UserAdapter2
+import com.example.assignment1.Data.UserData
 import com.example.assignment1.databinding.FragmentBlank2Binding
 
 class BlankFragment2 : Fragment() {

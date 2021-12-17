@@ -1,4 +1,4 @@
-package com.example.assignment1
+package com.example.assignment1.Fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
-import com.example.assignment1.databinding.FragmentBlank1Binding
+import com.example.assignment1.R
+import com.example.assignment1.Util.SharedPreferences
 import com.example.assignment1.databinding.FragmentProfileBinding
+import com.example.assignment1.Util.shortToast
 
 class ProfileFragment : Fragment() {
 
@@ -21,8 +23,16 @@ class ProfileFragment : Fragment() {
         binding = FragmentProfileBinding.inflate(layoutInflater)
         initTransactionEvent()
         initImage()
+        initClickEvent()
         return binding.root
+    }
 
+    private fun initClickEvent(){
+        binding.ivAutoLoginFalse.setOnClickListener{
+            requireContext().shortToast("자동로그인 해제")
+            SharedPreferences.removeAutoLogin(requireContext())
+            SharedPreferences.clearStorage(requireContext())
+        }
     }
 
     private fun initImage(){

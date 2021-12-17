@@ -1,5 +1,9 @@
-package com.example.assignment1
+package com.example.assignment1.Util
 
+import com.example.assignment1.Data.RequestLoginData
+import com.example.assignment1.Data.RequestSignUpData
+import com.example.assignment1.Data.ResponseLoginData
+import com.example.assignment1.Data.ResponseSignUpData
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.Headers

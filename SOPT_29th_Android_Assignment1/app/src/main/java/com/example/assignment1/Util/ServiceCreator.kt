@@ -1,4 +1,4 @@
-package com.example.assignment1
+package com.example.assignment1.Util
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

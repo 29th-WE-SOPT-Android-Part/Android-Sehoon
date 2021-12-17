@@ -1,11 +1,14 @@
-package com.example.assignment1
+package com.example.assignment1.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.view.get
 import androidx.viewpager2.widget.ViewPager2
+import com.example.assignment1.Fragment.CameraFragment
+import com.example.assignment1.Fragment.HomeFragment
+import com.example.assignment1.Fragment.ProfileFragment
+import com.example.assignment1.R
+import com.example.assignment1.Adapter.ViewPagerAdapter
 import com.example.assignment1.databinding.ActivityHomeBinding
-import com.example.assignment1.databinding.ActivitySignUpBinding
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var viewPagerAdapter: ViewPagerAdapter
@@ -22,7 +25,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun initAdapter(){
 
-        val fragmentList = listOf(ProfileFragment(),HomeFragment(),CameraFragment())
+        val fragmentList = listOf(ProfileFragment(), HomeFragment(), CameraFragment())
         viewPagerAdapter = ViewPagerAdapter(this)
         viewPagerAdapter.fragments.addAll(fragmentList)
 

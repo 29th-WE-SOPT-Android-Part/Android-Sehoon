@@ -1,8 +1,9 @@
-package com.example.assignment1
+package com.example.assignment1.Adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.assignment1.Data.UserData
 import com.example.assignment1.databinding.ItemFollowerListBinding
 
 

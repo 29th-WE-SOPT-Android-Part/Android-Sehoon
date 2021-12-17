@@ -1,12 +1,12 @@
-package com.example.assignment1
+package com.example.assignment1.Fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.assignment1.Adapter.ViewPagerAdapter2
 import com.example.assignment1.databinding.FragmentHomeBinding
-import com.example.assignment1.databinding.FragmentProfileBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
 

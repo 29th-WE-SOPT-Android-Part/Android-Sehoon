@@ -1,11 +1,14 @@
-package com.example.assignment1
+package com.example.assignment1.Activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import com.example.assignment1.databinding.ActivityMainBinding
+import com.example.assignment1.R
+import com.example.assignment1.Data.RequestSignUpData
+import com.example.assignment1.Data.ResponseSignUpData
+import com.example.assignment1.Util.ServiceCreator2
 import com.example.assignment1.databinding.ActivitySignUpBinding
 import retrofit2.Call
 import retrofit2.Callback
@@ -19,6 +22,7 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_up)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         binding.btnJoined.setOnClickListener {
 
@@ -52,7 +56,7 @@ class SignUpActivity : AppCompatActivity() {
             ){
                 if(response.isSuccessful){
                     Toast.makeText(this@SignUpActivity,"${response.body()?.data?.name}님 반갑습니다", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this@SignUpActivity,SignInActivity::class.java))
+                    startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))
                 }
                 else{
                     response.body()

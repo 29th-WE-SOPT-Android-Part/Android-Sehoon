@@ -1,10 +1,16 @@
-package com.example.assignment1
+package com.example.assignment1.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import android.content.Intent
 import android.util.Log
+import com.example.assignment1.*
+import com.example.assignment1.Data.RequestLoginData
+import com.example.assignment1.Data.ResponseLoginData
+import com.example.assignment1.Util.ServiceCreator
+import com.example.assignment1.Util.SharedPreferences
+import com.example.assignment1.Util.shortToast
 import retrofit2.Call
 import com.example.assignment1.databinding.ActivityMainBinding
 import retrofit2.Callback
@@ -23,22 +29,42 @@ class SignInActivity : AppCompatActivity() {
 
         binding.btnLogin.setOnClickListener {
 
-
-
             val pwText = binding.edPw.text.toString()
             val idText = binding.edId.text.toString()
 
             if (pwText.isEmpty() || idText.isEmpty()) {
-                Toast.makeText(this, "로그인 실패", Toast.LENGTH_SHORT).show()
+                shortToast("로그인 실패")
             } else {
                 initNetwork()
             }
+
         }
 
         binding.tvJoin1.setOnClickListener {
                 startActivity(intent2)
+
         }
+
+        initClickEvent()
+        isAutoLogin()
+
         setContentView(binding.root)
+    }
+
+    private fun initClickEvent(){
+        binding.ibAutoLogin.setOnClickListener{
+            binding.ibAutoLogin.isSelected = !binding.ibAutoLogin.isSelected
+
+            SharedPreferences.setAutoLogin(this, binding.ibAutoLogin.isSelected)
+        }
+    }
+
+    private fun isAutoLogin() {
+        if(SharedPreferences.getAutoLogin(this)){
+            shortToast("자동로그인 완료")
+            startActivity(Intent(this, HomeActivity::class.java))
+                finish()
+        }
     }
 
     private fun initNetwork(){
@@ -56,11 +82,10 @@ class SignInActivity : AppCompatActivity() {
             ){
                 if(response.isSuccessful){
                    Toast.makeText(this@SignInActivity,"${response.body()?.data?.name}님 반갑습니다", Toast.LENGTH_SHORT).show()
-                   startActivity(Intent(this@SignInActivity,HomeActivity::class.java))
+                   startActivity(Intent(this@SignInActivity, HomeActivity::class.java))
                 }
                 else{
                     response.body()
-
                 }
             }
 

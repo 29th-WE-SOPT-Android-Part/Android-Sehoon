@@ -104,6 +104,16 @@ private fun initClickEvent(){
 </code>
 </pre>
 
+### :pushpin: util 클래스
+
+<pre>
+<code>
+fun Context.shortToast(message : String){
+    Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+}
+</code>
+</pre>
+
 
 
 <br>

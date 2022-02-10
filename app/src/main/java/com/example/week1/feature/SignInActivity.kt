@@ -1,18 +1,33 @@
 package com.example.week1.feature
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.week1.databinding.ActivitySignInBinding
 import com.example.week1.util.shortToast
 
 class SignInActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignInBinding
+    private lateinit var getResultText: ActivityResultLauncher<Intent>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
         clickEvent()
+        getResultText = registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()){ result ->
+            if (result.resultCode == RESULT_OK){
+                val mString = result.data?.getStringExtra(STRING_INTENT_KEY)
+                Log.d(TAG, "$mString")
+            }
+        }
+        val mIntent = Intent(this, SignUpActivity::class.java)
+        getResultText.launch(mIntent)
     }
 
     private fun clickEvent() {

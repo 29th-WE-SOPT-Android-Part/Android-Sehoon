@@ -1,11 +1,9 @@
 package com.example.week1.feature
 
 import android.app.Activity
-import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.week1.databinding.ActivitySignInBinding
@@ -14,34 +12,35 @@ import com.example.week1.util.shortToast
 class SignInActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignInBinding
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
         clickEvent()
+        beingPassedIntent()
+    }
 
-        val resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult())
-        {result ->
-            if(result.resultCode == Activity.RESULT_OK){
-                val myData: Intent? = result.data
-                val stringData = myData?.getStringExtra("dataName")
+    private fun beingPassedIntent() {
+        val resultLauncher =
+            registerForActivityResult(ActivityResultContracts.StartActivityForResult())
+            { result ->
+                if (result.resultCode == Activity.RESULT_OK) {
+                    val myData: Intent? = result.data
+
+                    binding.etSigninId.setText(myData?.getStringExtra("id"))
+                    binding.etSigninPw.setText(myData?.getStringExtra("pw"))
+                }
             }
-        }
 
-        fun openSomeActivityForResult(){
-            val intent = Intent(this, SignUpActivity::class.java)
-            resultLauncher.launch(intent)
-        }
-
+        val intent = Intent(this, SignUpActivity::class.java)
+        resultLauncher.launch(intent)
     }
 
     private fun clickEvent() {
         with(binding) {
-
             btnSigninLogin.setOnClickListener {
-                var etId = etSigninId.text.toString()
-                var etPw = etSigninPw.text.toString()
+                val etId = etSigninId.text.toString()
+                val etPw = etSigninPw.text.toString()
 
                 if (etId.isEmpty() || etPw.isEmpty()) {
                     shortToast("로그인 실패")

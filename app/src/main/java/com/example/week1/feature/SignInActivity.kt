@@ -1,5 +1,6 @@
 package com.example.week1.feature
 
+import android.app.Activity
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
@@ -12,22 +13,27 @@ import com.example.week1.util.shortToast
 
 class SignInActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignInBinding
-    private lateinit var getResultText: ActivityResultLauncher<Intent>
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
         clickEvent()
-        getResultText = registerForActivityResult(
-            ActivityResultContracts.StartActivityForResult()){ result ->
-            if (result.resultCode == RESULT_OK){
-                val mString = result.data?.getStringExtra(STRING_INTENT_KEY)
-                Log.d(TAG, "$mString")
+
+        val resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult())
+        {result ->
+            if(result.resultCode == Activity.RESULT_OK){
+                val myData: Intent? = result.data
+                val stringData = myData?.getStringExtra("dataName")
             }
         }
-        val mIntent = Intent(this, SignUpActivity::class.java)
-        getResultText.launch(mIntent)
+
+        fun openSomeActivityForResult(){
+            val intent = Intent(this, SignUpActivity::class.java)
+            resultLauncher.launch(intent)
+        }
+
     }
 
     private fun clickEvent() {

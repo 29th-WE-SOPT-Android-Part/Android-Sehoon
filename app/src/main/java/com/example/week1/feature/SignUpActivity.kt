@@ -1,10 +1,8 @@
 package com.example.week1.feature
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.view.Gravity.apply
-import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.week1.databinding.ActivitySignUpBinding
 import com.example.week1.util.shortToast
@@ -18,8 +16,6 @@ class SignUpActivity : AppCompatActivity() {
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
         clickEvent()
-
-
     }
 
     private fun clickEvent() {
@@ -28,12 +24,12 @@ class SignUpActivity : AppCompatActivity() {
                 var etName = etSignupName.text.toString()
                 var etId = etSignupId.text.toString()
                 var etPw = etSignupPw.text.toString()
-                val mIntent = Intent(this@SignUpActivity, SignInActivity::class.java).apply{
-                    putExtra(SignInActivity., "Good")
-                }
-                setResult(RESULT_OK, mIntent)
 
 
+                val intent = Intent(this@SignUpActivity, SignInActivity::class.java)
+                intent.putExtra("dataName", "blahblahblah")
+                setResult(Activity.RESULT_OK, intent)
+                finish()
 
 
                 if (etId.isEmpty() || etPw.isEmpty() || etName.isEmpty()) {

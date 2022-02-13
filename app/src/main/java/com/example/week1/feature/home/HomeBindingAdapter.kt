@@ -12,7 +12,7 @@ object HomeBindingAdapter {
         AppCompatResources.getDrawable(imageview.context, id).also {
             imageview.setImageDrawable(it)
         }
-    }
+    } //
 }
 
 class HomeAdapter {

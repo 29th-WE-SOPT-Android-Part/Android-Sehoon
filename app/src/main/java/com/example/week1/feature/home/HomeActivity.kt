@@ -10,13 +10,12 @@ import com.example.week1.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
-    private val homeAdapter = HomeAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_home)
         clickEvent()
-        addHomeData()
+        dataBinding()
     }
 
     private fun clickEvent() {
@@ -34,5 +33,13 @@ class HomeActivity : AppCompatActivity() {
         )
     }
 
-
+    private fun dataBinding() {
+        binding.home = HomeData(
+            "김세훈",
+            "25",
+            "ENFJ",
+            "우하하하",
+            R.drawable.ic_launcher_foreground
+        )
+    }
 }

@@ -11,29 +11,22 @@ import com.example.week1.util.shortToast
 
 class SignInActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignInBinding
+    val resultLauncher =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult())
+        { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                val myData: Intent? = result.data
+
+                binding.etSigninId.setText(myData?.getStringExtra("id"))
+                binding.etSigninPw.setText(myData?.getStringExtra("pw"))
+            }
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
         clickEvent()
-        beingPassedIntent()
-    }
-
-    private fun beingPassedIntent() {
-        val resultLauncher =
-            registerForActivityResult(ActivityResultContracts.StartActivityForResult())
-            { result ->
-                if (result.resultCode == Activity.RESULT_OK) {
-                    val myData: Intent? = result.data
-
-                    binding.etSigninId.setText(myData?.getStringExtra("id"))
-                    binding.etSigninPw.setText(myData?.getStringExtra("pw"))
-                }
-            }
-
-        val intent = Intent(this, SignUpActivity::class.java)
-        resultLauncher.launch(intent)
     }
 
     private fun clickEvent() {
@@ -51,7 +44,7 @@ class SignInActivity : AppCompatActivity() {
             }
 
             btnSigninSignup.setOnClickListener {
-                startActivity(Intent(this@SignInActivity, SignUpActivity::class.java))
+                resultLauncher.launch(Intent(this@SignInActivity, SignUpActivity::class.java))
             }
         }
     }

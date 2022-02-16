@@ -34,11 +34,5 @@ class HomeActivity : AppCompatActivity() {
         )
     }
 
-    private fun addHomeData(){
-        homeAdapter.homeList.addAll(
-            listOf<HomeData>(
-                HomeData("김세훈", "25", "ENFJ", "하읭")
-            )
-        )
-    }
+
 }

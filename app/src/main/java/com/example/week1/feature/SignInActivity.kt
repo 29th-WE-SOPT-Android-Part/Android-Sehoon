@@ -12,7 +12,8 @@ import com.example.week1.util.shortToast
 class SignInActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignInBinding
     val resultLauncher =
-        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult())
+        { result ->
             if (result.resultCode == Activity.RESULT_OK) {
                 val myData: Intent? = result.data
 

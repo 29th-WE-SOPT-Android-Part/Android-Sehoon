@@ -9,13 +9,13 @@ import com.example.week1.R
 import com.example.week1.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
-   // private var position = FIRST_POSITION
+    private var position = FIRST_POSITION
     private lateinit var binding: ActivityHomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_home)
-      //  clickEvent()
+        //  clickEvent()
         dataBinding()
         initTransactionEvent()
     }
@@ -33,18 +33,31 @@ class HomeActivity : AppCompatActivity() {
 
         transaction.add(R.id.fcv_home_swaplist, followerFragment).commit()
 
-        with(binding){
-            btnHomeRepositorylist.setOnClickListener {
-                transaction.replace(com.example.week1.R.id.fcv_home_swaplist, repositoryFragment)
+        with(binding) {
+            btnHomeFollowerlist.setOnClickListener {
+                if (position == SECOND_POSITION) {
+                    transaction.replace(
+                        com.example.week1.R.id.fcv_home_swaplist,
+                        followerFragment
+                    )
+                    position = FIRST_POSITION
+                }
+
             }
 
-            btnHomeFollowerlist.setOnClickListener {
-                transaction.replace(com.example.week1.R.id.fcv_home_swaplist, followerFragment)
+            btnHomeRepositorylist.setOnClickListener {
+                if (position == FIRST_POSITION) {
+                    transaction.replace(
+                        com.example.week1.R.id.fcv_home_swaplist,
+                        repositoryFragment
+                    )
+                    position = SECOND_POSITION
+                }
 
             }
 
         }
-       //  transaction.commit()
+          transaction.commit()
     }
 
     private fun callWeb() {
@@ -66,8 +79,8 @@ class HomeActivity : AppCompatActivity() {
         )
     }
 
-//    companion object {
-//        const val FIRST_POSITION = 1
-//        const val SECOND_POSITION = 2
-//    }
+    companion object {
+        const val FIRST_POSITION = 1
+        const val SECOND_POSITION = 2
+    }
 }

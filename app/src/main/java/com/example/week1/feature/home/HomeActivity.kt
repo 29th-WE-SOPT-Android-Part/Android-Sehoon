@@ -35,20 +35,19 @@ class HomeActivity : AppCompatActivity() {
         with(binding) {
             btnHomeFollowerlist.setOnClickListener {
                 supportFragmentManager.beginTransaction().replace(
-                    com.example.week1.R.id.fcv_home_swaplist,
+                    R.id.fcv_home_swaplist,
                     followerFragment
                 ).commit()
             }
 
             btnHomeRepositorylist.setOnClickListener {
                 supportFragmentManager.beginTransaction().replace(
-                    com.example.week1.R.id.fcv_home_swaplist,
+                    R.id.fcv_home_swaplist,
                     repositoryFragment
                 ).commit()
             }
         }
     }
-
 
     private fun callWeb() {
         startActivity(

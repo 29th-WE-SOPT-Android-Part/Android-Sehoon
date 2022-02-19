@@ -9,7 +9,6 @@ import com.example.week1.R
 import com.example.week1.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
-    private var position = FIRST_POSITION
     private lateinit var binding: ActivityHomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,36 +28,27 @@ class HomeActivity : AppCompatActivity() {
     private fun initTransactionEvent() {
         val followerFragment = FollowerFragment()
         val repositoryFragment = RepositoryFragment()
-        val transaction = supportFragmentManager.beginTransaction()
 
-        transaction.add(R.id.fcv_home_swaplist, followerFragment).commit()
+        supportFragmentManager.beginTransaction().add(R.id.fcv_home_swaplist, followerFragment)
+            .commit()
 
         with(binding) {
             btnHomeFollowerlist.setOnClickListener {
-                if (position == SECOND_POSITION) {
-                    transaction.replace(
-                        com.example.week1.R.id.fcv_home_swaplist,
-                        followerFragment
-                    )
-                    position = FIRST_POSITION
-                }
-
+                supportFragmentManager.beginTransaction().replace(
+                    com.example.week1.R.id.fcv_home_swaplist,
+                    followerFragment
+                ).commit()
             }
 
             btnHomeRepositorylist.setOnClickListener {
-                if (position == FIRST_POSITION) {
-                    transaction.replace(
-                        com.example.week1.R.id.fcv_home_swaplist,
-                        repositoryFragment
-                    )
-                    position = SECOND_POSITION
-                }
-
+                supportFragmentManager.beginTransaction().replace(
+                    com.example.week1.R.id.fcv_home_swaplist,
+                    repositoryFragment
+                ).commit()
             }
-
         }
-          transaction.commit()
     }
+
 
     private fun callWeb() {
         startActivity(
@@ -77,10 +67,5 @@ class HomeActivity : AppCompatActivity() {
             "우하하하",
             R.drawable.ic_launcher_foreground
         )
-    }
-
-    companion object {
-        const val FIRST_POSITION = 1
-        const val SECOND_POSITION = 2
     }
 }

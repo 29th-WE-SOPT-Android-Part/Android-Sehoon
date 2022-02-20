@@ -1,7 +1,5 @@
 package com.example.week1.feature.home
 
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -14,16 +12,10 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_home)
-        //  clickEvent()
+
         dataBinding()
         initTransactionEvent()
     }
-
-//    private fun clickEvent() {
-//        binding.btnHomeMygithub.setOnClickListener {
-//            callWeb()
-//        }
-//    }
 
     private fun initTransactionEvent() {
         val followerFragment = FollowerFragment()
@@ -49,14 +41,14 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
-    private fun callWeb() {
-        startActivity(
-            Intent(
-                Intent.ACTION_VIEW,
-                Uri.parse("https://github.com/s9hn?tab=repositories")
-            )
-        )
-    }
+//    private fun callWeb() {
+//        startActivity(
+//            Intent(
+//                Intent.ACTION_VIEW,
+//                Uri.parse("https://github.com/s9hn?tab=repositories")
+//            )
+//        )
+//    }
 
     private fun dataBinding() {
         binding.home = HomeData(

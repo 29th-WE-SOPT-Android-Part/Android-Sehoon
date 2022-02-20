@@ -152,6 +152,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
                     android:text="@string/btn_home_followerlist"
+                    android:textColor="@color/white"
+                    android:background="@drawable/rectangle_home_btnfollower"
                     app:layout_constraintEnd_toStartOf="@+id/btn_home_repositorylist"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_home_introduce" />
@@ -161,6 +163,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/btn_home_repositorylist"
+                    android:textColor="@color/white"
+                    android:background="@drawable/rectangle_home_btnrepository"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/btn_home_followerlist"
                     app:layout_constraintTop_toTopOf="@+id/btn_home_followerlist" />
@@ -180,7 +184,6 @@
 
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/fcv_home_swaplist"
-                    android:name="com.example.week1.feature.home.FollowerFragment"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginTop="20dp"

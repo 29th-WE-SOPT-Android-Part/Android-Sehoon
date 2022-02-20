@@ -29,6 +29,5 @@ class RepositoryAdapter : RecyclerView.Adapter<RepositoryAdapter.RepositoryViewH
         fun onBind(data: FragmentData) {
             binding.repository = data
         }
-
     }
 }

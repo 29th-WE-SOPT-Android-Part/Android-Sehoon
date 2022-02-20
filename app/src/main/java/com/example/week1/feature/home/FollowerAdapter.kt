@@ -25,9 +25,12 @@ class FollowerAdapter : RecyclerView.Adapter<FollowerAdapter.FollowerViewHolder>
     class FollowerViewHolder(
         private val binding: ItemFollowerListBinding
     ) : RecyclerView.ViewHolder(binding.root) {
+
         fun onBind(data: FragmentData) {
             binding.follower = data
-        }
+            itemView.setOnClickListener() {
 
+            }
+        }
     }
 }

@@ -1,7 +1,9 @@
 package com.example.week1.feature.home
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.week1.databinding.ItemRepositoryListBinding
 
@@ -28,6 +30,15 @@ class RepositoryAdapter : RecyclerView.Adapter<RepositoryAdapter.RepositoryViewH
 
         fun onBind(data: FragmentData) {
             binding.repository = data
+            itemView.setOnClickListener() {
+                val name = binding.tvRepositoryName.text.toString()
+                // val icon = binding.ivFollowerProfile.
+
+                val repositoryToDetailIntent =
+                    Intent(itemView.context, DetailActivity::class.java)
+                repositoryToDetailIntent.putExtra("name",name)
+                ContextCompat.startActivity(itemView.context, repositoryToDetailIntent, null)
+            }
         }
     }
 }

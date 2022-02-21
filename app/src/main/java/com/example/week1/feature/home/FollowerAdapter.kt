@@ -1,7 +1,9 @@
 package com.example.week1.feature.home
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.week1.databinding.ItemFollowerListBinding
 
@@ -29,7 +31,13 @@ class FollowerAdapter : RecyclerView.Adapter<FollowerAdapter.FollowerViewHolder>
         fun onBind(data: FragmentData) {
             binding.follower = data
             itemView.setOnClickListener() {
+                val name = binding.tvFollowerName.text.toString()
+               // val icon = binding.ivFollowerProfile.
 
+                val followerToDetailIntent =
+                    Intent(itemView.context, DetailActivity::class.java)
+                followerToDetailIntent.putExtra("name",name)
+                ContextCompat.startActivity(itemView.context, followerToDetailIntent, null)
             }
         }
     }

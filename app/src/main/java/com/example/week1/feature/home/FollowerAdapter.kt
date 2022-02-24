@@ -34,6 +34,8 @@ class FollowerAdapter : RecyclerView.Adapter<FollowerAdapter.FollowerViewHolder>
                 val name = binding.tvFollowerName.text.toString()
                 val icon = binding.ivFollowerProfile.setImageIcon()
 
+                val
+
                 val followerToDetailIntent =
                     Intent(itemView.context, DetailActivity::class.java)
                 followerToDetailIntent.putExtra("name",name)

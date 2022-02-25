@@ -28,4 +28,6 @@ class DetailActivity : AppCompatActivity() {
             }
         }
     }
+
+    private fun getText() =
 }

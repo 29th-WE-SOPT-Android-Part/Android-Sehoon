@@ -9,5 +9,4 @@ object HomeBindingAdapter {
     fun setImageResId(imageview: ImageView, resId: Int) {
         imageview.setImageResource(resId)
     }
-
 }

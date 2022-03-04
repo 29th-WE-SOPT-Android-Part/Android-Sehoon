@@ -32,7 +32,7 @@ class RepositoryAdapter : RecyclerView.Adapter<RepositoryAdapter.RepositoryViewH
             binding.repository = data
             itemView.setOnClickListener() {
                 val name = binding.tvRepositoryName.text.toString()
-                // val icon = binding.ivFollowerProfile.
+
 
                 val repositoryToDetailIntent =
                     Intent(itemView.context, DetailActivity::class.java)

@@ -32,9 +32,9 @@ class FollowerAdapter : RecyclerView.Adapter<FollowerAdapter.FollowerViewHolder>
             binding.follower = data
             itemView.setOnClickListener() {
                 val name = binding.tvFollowerName.text.toString()
-                val icon = binding.ivFollowerProfile.setImageIcon()
+                val icon = binding.ivFollowerProfile.
 
-                val followerToDetatilImageIntent
+
 
                 val followerToDetailIntent =
                     Intent(itemView.context, DetailActivity::class.java)

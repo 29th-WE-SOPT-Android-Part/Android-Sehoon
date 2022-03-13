@@ -32,7 +32,7 @@ class FollowerAdapter : RecyclerView.Adapter<FollowerAdapter.FollowerViewHolder>
             binding.follower = data
             itemView.setOnClickListener() {
                 val name = binding.tvFollowerName.text.toString()
-                val icon = binding.ivFollowerProfile.toy1234
+                val icon = binding.ivFollowerProfile.toy12344
 
 
 

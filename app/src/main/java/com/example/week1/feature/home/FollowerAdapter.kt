@@ -32,7 +32,7 @@ class FollowerAdapter : RecyclerView.Adapter<FollowerAdapter.FollowerViewHolder>
             binding.follower = data
             itemView.setOnClickListener() {
                 val name = binding.tvFollowerName.text.toString()
-wd1235235
+wd12352356
 
 
 

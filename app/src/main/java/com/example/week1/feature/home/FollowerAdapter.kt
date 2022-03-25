@@ -33,12 +33,9 @@ class FollowerAdapter : RecyclerView.Adapter<FollowerAdapter.FollowerViewHolder>
             itemView.setOnClickListener() {
                 val name = binding.tvFollowerName.text.toString()
 
-
-
-
                 val followerToDetailIntent =
                     Intent(itemView.context, DetailActivity::class.java)
-                followerToDetailIntent.putExtra("name",name)
+                followerToDetailIntent.putExtra("name", name)
                 ContextCompat.startActivity(itemView.context, followerToDetailIntent, null)
             }
         }

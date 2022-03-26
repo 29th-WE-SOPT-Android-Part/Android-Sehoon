@@ -32,7 +32,7 @@ class RepositoryAdapter : RecyclerView.Adapter<RepositoryAdapter.RepositoryViewH
             binding.repository = data
             itemView.setOnClickListener() {
                 val name = binding.tvRepositoryName.text.toString()
-
+v
                 val repositoryToDetailIntent =
                     Intent(itemView.context, DetailActivity::class.java)
                 repositoryToDetailIntent.putExtra("name",name)

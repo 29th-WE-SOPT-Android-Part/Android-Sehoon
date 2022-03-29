@@ -36,7 +36,7 @@ class FollowerFragment : Fragment() {
         followerAdapter.itemList.addAll(
             listOf<FragmentData>(
                 FragmentData(,"권용민", "1"),
-                FragmentData("김세훈", "2"),
+                FragmentData(,"김세훈", "2"),
                 FragmentData("이종찬", "3"),
                 FragmentData("이혜빈", "4"),
                 FragmentData("최정원", "5")

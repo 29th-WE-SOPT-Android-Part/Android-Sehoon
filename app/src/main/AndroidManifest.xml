@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Week1">
         <activity
+            android:name=".feature.home.DetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".feature.home.HomeActivity"
             android:exported="true" />
         <activity

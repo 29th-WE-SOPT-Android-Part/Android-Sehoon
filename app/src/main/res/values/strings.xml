@@ -32,8 +32,13 @@
     <string name="tv_home_usermbti">ENFJ</string>
     <string name="tv_home_introduce">소개</string>
     <string name="tv_home_userintroduce">하잉</string>
-    <string name="btn_home_gitlink">myGITHUB</string>
+    <string name="btn_home_followerlist">팔로워\n목록</string>
+    <string name="btn_home_repositorylist">레포지토리\n목록</string>
 
+    <!--홈 뷰-->
+    <string name="tv_detail_maintitle">SOPTHub</string>
+    <string name="tv_detail_name">이름 : </string>
+    <string name="tv_detail_detailintro">상세 소개</string>
 
 
 
